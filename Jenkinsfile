@@ -5,13 +5,16 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'cd APIAutoMation && /usr/local/share/dotnet/dotnet build APIAutoMation.csproj'
+                sh 'pwd'
+                sh 'ls'
+                sh 'ls APIAutoMation'
+                sh '/usr/local/share/dotnet/dotnet build APIAutoMation/APIAutoMation.csproj'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'cd APIAutoMation && /usr/local/share/dotnet/dotnet test APIAutoMation.csproj'
+                sh '/usr/local/share/dotnet/dotnet test APIAutoMation/APIAutoMation.csproj'
             }
         }
 
