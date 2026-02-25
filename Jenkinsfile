@@ -5,13 +5,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh '/usr/local/share/dotnet/dotnet build RestApiAutomation.sln'
+                sh 'cd APIAutoMation && /usr/local/share/dotnet/dotnet build APIAutoMation.csproj'
             }
         }
 
         stage('Test') {
             steps {
-                sh '/usr/local/share/dotnet/dotnet test RestApiAutomation.sln'
+                sh 'cd APIAutoMation && /usr/local/share/dotnet/dotnet test APIAutoMation.csproj'
             }
         }
 
